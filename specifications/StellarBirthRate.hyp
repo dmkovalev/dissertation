@@ -1,0 +1,11 @@
+{StellarBirthRate;
+    supertype:SFR, IMF;
+}
+# Note, that data type has no realization, so we use subtype to add it:
+
+{StellarBirthRateRealization;
+    supertype: StellarBirthRate;
+    draw_number_stars: {in function;
+        params: {-res/double}
+        post: res = draw_mass * draw_sfr}
+}

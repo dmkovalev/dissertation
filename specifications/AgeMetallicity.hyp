@@ -1,0 +1,10 @@
+{AgeMetallicity; in type;
+    supertype: AgeBins;
+    draw_FeH { in: function;
+        params: {age/double, -metallicity/double}
+        pre: age in this.age_intervals;
+        post: metallicity = -0.077 * age + 0.156 }
+    draw_dispersion {age/double, -dispersion/double}
+        pre: age in this.age_intervals;
+        post: 0.01 * age + 0.1192 
+ }}    

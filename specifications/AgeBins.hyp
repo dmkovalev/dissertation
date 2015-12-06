@@ -1,0 +1,8 @@
+# BGM apart from model ingredients has also implicit hypotheses, which are not
+# marked as ingedients. For example, 1) thin disk is divided into seven age bins;
+
+{AgeBins; in type;
+    supertype: Hypothesis;
+    age_intervals: Interval[];
+    invariant: age_intervals.size = 7;
+}
